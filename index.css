@@ -85,3 +85,7 @@ select {
     white-space: nowrap;
     border: 0;
 }
+
+.box {
+    background-color: aqua;
+}
