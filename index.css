@@ -92,7 +92,7 @@ select {
 }
 
 .call-to-action {
-    --gap: 15rem;
+    --gap: 5rem;
     background-color: coral;
     padding: 2rem;
     border-radius: 1rem;
