@@ -109,3 +109,6 @@ select {
 }
 
 /* colors */
+.bg-dark {
+    background-color: hsl(var(--clr-dark));
+}
