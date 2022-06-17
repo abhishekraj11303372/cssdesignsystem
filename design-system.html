@@ -115,25 +115,36 @@
 
             
             
-            <div class="flex">
-                <div style="margin-top:5rem">
+            <div class="flex planet-buttons">
+                <div class="button1" style="margin-top:5rem">
                     <!-- explore button -->
-                <a href="#" class="large-button fs-600 text-dark bg-white uppercase ff-serif">Explore</a>
-                <a href="#" class="large-button fs-200 text-dark bg-accent uppercase ff-serif">Explore</a>
+                    <a href="#" class="large-button-idle fs-600 text-dark bg-white uppercase ff-serif">Explore</a>
+                    <span>Landing Page Main Button - Idle</span>
+                
+                    <a href="#" class="large-button fs-600 text-dark bg-accent uppercase ff-serif">Explore</a>
+                    <span>Landing Page Main Button - Hover</span>
                 </div>
-                <div>
+                <div class="button2">
                     <!-- Tabs -->
                         <div class="tab-list underlined-indicators flex">
                             <button aria-selected="true" class="uppercase text-accent letter-spacng-2 bg-dark ff-sans-cond">Mars</button>
                             <button aria-selected="false" class="uppercase text-accent letter-spacng-2 bg-dark ff-sans-cond">Moon</button>
                             <button aria-selected="false" class="uppercase text-accent letter-spacng-2 bg-dark ff-sans-cond">Satellite</button>
                         </div>
+                        <span>Tabs(Active, Hover & Idle)</span>
                     <!-- Dots -->
                     <div class="dot-indicators flex">
                         <button aria-selected="true" ><span class="sr-only">Slide Text</span></button>
                         <button aria-selected="false" ><span class="sr-only">Slide Text</span></button>
                         <button aria-selected="false" ><span class="sr-only">Slide Text</span></button>
                     </div>
+                    <!-- numbered buttons -->
+                    <div class="dot-indicators grid numbered-buttons">
+                        <button aria-selected="true">1</button>
+                        <button aria-selected="false">2</button>
+                        <button aria-selected="false">3</button>
+                    </div>
+                    <span>Slider 2 States(Active, Hover & Idle)</span>
                 </div>
             </div>
         </section>

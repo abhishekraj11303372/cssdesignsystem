@@ -241,6 +241,17 @@ select {
     text-decoration: none;
 }
 
+.large-button-idle {
+    position: relative;
+    display: grid;
+    z-index: 1;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    place-items: center;
+    text-decoration: none;
+}
+
 .large-button::after {
     content: '';
     position: absolute;
@@ -304,6 +315,7 @@ select {
      aspect-ratio: 1;
      padding: .5em;
      background-color: hsl(var(--clr-white) / .25);
+     justify-content: center;
 }
 
 .dot-indicators > *:hover,
@@ -323,4 +335,26 @@ select {
 background-color: hsl(var(--clr-white) / .1);
 display: grid;
 justify-content: space-around;
+}
+
+.planet-buttons {
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.button1 > span {
+    margin: 2rem 0 8rem 0;
+    display: grid;
+    text-align: center;
+}
+
+.button2 > span {
+    margin: 1rem 0 1rem 0;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+.numbered-buttons {
+    padding: 40%;
 }
