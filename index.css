@@ -132,6 +132,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.d-block {
+    display: block;
+}
+
 /* .flow > * + * {
     margin-top: 1rem;
     outline: 1px solid red;
@@ -158,25 +162,39 @@ select {
 }
 
 .grid-container {
+    text-align: center;
     display: grid;
-    border: 5px solid green;
+    /* border: 5px solid green; */
+    place-items: center;
+    padding-inline: 1rem;
 }
 
 @media (min-width: 45rem) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
     }
 
+    .grid-container * {
+        max-width: 50ch;
+    }
+
     .grid-container > *:first-child {
         grid-column: 2;
-        outline: 1px solid red;
+        /* outline: 1px solid red; */
     }
     
     .grid-container > *:last-child {
         grid-column: 3;
-        outline: 1px solid yellow;
+        /* outline: 1px solid yellow; */
     }
+
+    
+.grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+}
 }
 
 .sr-only {
@@ -275,6 +293,7 @@ select {
 /* ---------------------------------------------------*/
 
 .large-button {
+    font-size: 2rem;
     position: relative;
     display: inline-grid;
     z-index: 1;
@@ -401,4 +420,29 @@ justify-content: space-around;
 
 .numbered-buttons {
     padding: 40%;
+}
+
+/* ---------------------------------------------------*/
+/* Page Specific Backgrounds                          */
+/* ---------------------------------------------------*/
+body {    
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* home  */
+
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
 }
