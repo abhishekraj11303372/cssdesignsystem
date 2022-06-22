@@ -132,6 +132,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.d-block {
+    display: block;
+}
+
 /* .flow > * + * {
     margin-top: 1rem;
     outline: 1px solid red;
@@ -158,14 +162,21 @@ select {
 }
 
 .grid-container {
+    text-align: center;
     display: grid;
     border: 5px solid green;
 }
 
 @media (min-width: 45rem) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+        place-items: center;
+    }
+
+    .grid-container * {
+        max-width: 50ch;
     }
 
     .grid-container > *:first-child {
@@ -275,6 +286,7 @@ select {
 /* ---------------------------------------------------*/
 
 .large-button {
+    font-size: 2rem;
     position: relative;
     display: inline-grid;
     z-index: 1;
