@@ -333,11 +333,72 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8rem;
+    /* --gap: 8rem; */
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    background: hsl(var(--clr-dark) / .95);
+    backdrop-filter: blur(1rem);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(var(--clr-white) / .05);
+        backdrop-filter: blur(1.5rem);
+    }
+
+    .primary-navigation a > span {
+        font-weight: 700;
+        margin-right: .5rem;
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        /* --gap: 8rem; */
+        --underline-gap: 0.5rem;
+        position: fixed;
+        z-index: 100;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem; 
+        margin: 0;
+        flex-direction: column;
+        /* transform: translateX(100%);
+        transition: transform 500ms ease-in-out; */
+    }
+
+    .primary-navigation.underlined-indicators > .active {
+        border: 0;
+    }
+
+    .mmobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 200;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+    
+    .mmobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
 }
 
 .primary-navigation a {
@@ -354,6 +415,7 @@ select {
     border: 0;
     cursor: pointer;
     border-bottom: .2rem solid hsl(var(--clr-white)/0);
+    background-color: transparent;
 }
 
 .underlined-indicators > *:hover,
