@@ -90,6 +90,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
 }
 
 /* make images easier to work with                  */
@@ -377,15 +378,15 @@ select {
         border: 0;
     }
 
-    .mmobile-nav-toggle {
+    .mobile-nav-toggle {
         display: block;
         position: absolute;
-        z-index: 200;
+        z-index: 2000;
         right: 1rem;
         top: 2rem;
         background: transparent;
         background-image: url(./assets/shared/icon-hamburger.svg);
-        background: no-repeat;
+        background-repeat: no-repeat;
         background-position: center;
         width: 1.5rem;
         aspect-ratio: 1;
@@ -395,7 +396,7 @@ select {
         background-image: url(./assets/shared/icon-close.svg);
     }
     
-    .mmobile-nav-toggle:focus-visible {
+    .mobile-nav-toggle:focus-visible {
         outline: 5px solid white;
         outline-offset: 5px;
     }
@@ -414,7 +415,7 @@ select {
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     cursor: pointer;
-    border-bottom: .2rem solid hsl(var(--clr-white)/0);
+    border-bottom: .2rem solid hsl(var(--clr-white)/0);  
     background-color: transparent;
 }
 
