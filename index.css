@@ -90,6 +90,7 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr;
+    overflow-x: hidden;
 }
 
 /* make images easier to work with                  */
@@ -369,33 +370,38 @@ select {
         padding: min(20rem, 15vh) 2rem; 
         margin: 0;
         flex-direction: column;
-        /* transform: translateX(100%);
-        transition: transform 500ms ease-in-out; */
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
     }
 
     .primary-navigation.underlined-indicators > .active {
         border: 0;
     }
 
-    .mmobile-nav-toggle {
+    .mobile-nav-toggle {
         display: block;
         position: absolute;
-        z-index: 200;
+        z-index: 2000;
         right: 1rem;
         top: 2rem;
         background: transparent;
         background-image: url(./assets/shared/icon-hamburger.svg);
-        background: no-repeat;
+        background-repeat: no-repeat;
         background-position: center;
         width: 1.5rem;
         aspect-ratio: 1;
         border: 0;
     }
+    
     .mobile-nav-toggle[aria-expanded="true"] {
         background-image: url(./assets/shared/icon-close.svg);
     }
     
-    .mmobile-nav-toggle:focus-visible {
+    .mobile-nav-toggle:focus-visible {
         outline: 5px solid white;
         outline-offset: 5px;
     }
@@ -414,7 +420,7 @@ select {
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     cursor: pointer;
-    border-bottom: .2rem solid hsl(var(--clr-white)/0);
+    border-bottom: .2rem solid hsl(var(--clr-white)/0);  
     background-color: transparent;
 }
 
