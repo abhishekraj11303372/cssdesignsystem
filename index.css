@@ -333,11 +333,32 @@ select {
     transform: scale(1.5);
 }
 
+/* primary header */
+
+.logo {
+    margin: 2rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+}
+
+.primary-navigation.underlined-indicators > .active {
+    border: 0;
+}
+
 .primary-navigation {
     /* --gap: 8rem; */
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin: 0;
     background: hsl(var(--clr-dark) / .95);
     backdrop-filter: blur(1rem);
