@@ -210,6 +210,20 @@ select {
     border: 0;
 }
 
+.skip-to-content {
+    position: absolute;
+    z-index: 999;
+    padding: .5em 1em;
+    background: hsl(var(--clr-white));
+    color: hsl(var(--clr-white));
+    margin-inline: auto;
+    transform: translateY(100%);
+}
+
+.skip-to-content {
+    transform: translateY(0);
+}
+
 .box {
     background-color: aqua;
     padding: 3rem;
