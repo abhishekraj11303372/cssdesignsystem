@@ -577,6 +577,10 @@ body {
     background-image: url(./assets/home/background-home-mobile.jpg);
 }
 
+.destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
 @media (min-width: 35rem) {
     .home {
         background-position: center center;
@@ -585,5 +589,14 @@ body {
 
     .home {
         background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+    
+    .destination {
+        background-position: center center;
+        background-image: url(./assets/destination/background-destination-tablet.jpg);
+    }
+
+    .destination {
+        background-image: url(./assets/destination/background-destination-desktop.jpg);
     }
 }
