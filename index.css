@@ -115,7 +115,7 @@ select {
     *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: auto !important;
+        transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
 }
@@ -162,6 +162,10 @@ select {
     max-width: 80rem;
 }
 
+/* ---------------------------------------------------*/
+/* Layout                                             */
+/* ---------------------------------------------------*/
+
 .grid-container {
     text-align: center;
     display: grid;
@@ -169,6 +173,30 @@ select {
     place-items: center;
     padding-inline: 1rem;
 }
+
+.grid-container * {
+    max-width: 50ch;
+}
+
+/* destination layout */
+
+.grid-container--destination {
+    grid-template-areas: 
+    'title',
+    'image',
+    'tabs',
+    'content' ;
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 60%;
+}
+
 
 @media (min-width: 45rem) {
     .grid-container {
@@ -215,12 +243,13 @@ select {
     z-index: 999;
     padding: .5em 1em;
     background: hsl(var(--clr-white));
-    color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
     margin-inline: auto;
-    transform: translateY(100%);
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in;
 }
 
-.skip-to-content {
+.skip-to-content:focus {
     transform: translateY(0);
 }
 
@@ -371,8 +400,8 @@ select {
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
     margin: 0;
     background: hsl(var(--clr-dark) / .95);
     backdrop-filter: blur(1rem);
@@ -466,9 +495,10 @@ select {
         position: relative;
         background: hsl(var(--clr-white) / .25);
         height: 1px;
-        width: 45%;
+        width: 100%;
         order: 1;
         margin-right: -3rem;
+        background: hsl(var(--clr-white) / .25);
     }
 
     nav {
