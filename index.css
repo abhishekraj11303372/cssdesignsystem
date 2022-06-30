@@ -197,6 +197,25 @@ select {
     max-width: 60%;
 }
 
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    border-top: 1px  solid hsl(var(--clr-white) / .1);
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.destination-meta h3{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media (min-width: 45rem) {
     .grid-container {
