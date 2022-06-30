@@ -212,9 +212,11 @@ select {
     margin-top: 2.5rem;
 }
 
-.destination-meta h3{
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 35rem) {
+    .destination-meta h3{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (min-width: 45rem) {
